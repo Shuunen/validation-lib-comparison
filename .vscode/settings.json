@@ -1,16 +1,20 @@
 {
-  "cSpell.words": [
-    "arktype",
-    "suretype",
-    "Suretype",
-    "valibot"
-  ],
-  "editor.quickSuggestions": {
-    "strings": "on"
-  },
+  "cSpell.words": ["arktype", "suretype", "Suretype", "valibot"],
   // prioritize ArkType's "type" for autoimports
-  "typescript.preferences.autoImportSpecifierExcludeRegexes": [
-    "^(node:)?os$"
-  ],
-  "typescript.tsdk": "node_modules\\typescript\\lib"
+  "js/ts.preferences.autoImportSpecifierExcludeRegexes": ["^(node:)?os$"],
+  "js/ts.tsdk.path": "node_modules\\typescript\\lib",
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#00354c",
+    "activityBar.foreground": "#f9fafb",
+    "activityBarBadge.background": "#006f9e",
+    "activityBarBadge.foreground": "#f9fafb",
+    "statusBar.background": "#00354c",
+    "statusBar.foreground": "#f9fafbcc",
+    "statusBar.inactiveBackground": "#002231",
+    "tab.activeBorderTop": "#006f9e",
+    "titleBar.activeBackground": "#006f9e",
+    "titleBar.activeForeground": "#f9fafb",
+    "titleBar.inactiveBackground": "#00354c",
+    "titleBar.inactiveForeground": "#f9fafbaa"
+  }
 }

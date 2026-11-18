@@ -1,0 +1,79 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "categories": {
+    "correctness": "error",
+    "nursery": "warn",
+    "pedantic": "warn",
+    "perf": "warn",
+    "restriction": "warn",
+    "style": "warn",
+    "suspicious": "warn"
+  },
+  "env": {
+    "node": true
+  },
+  "ignorePatterns": ["dist/**", "coverage/**", "src/**"],
+  "options": {
+    "typeAware": true,
+    "typeCheck": true
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.{js,ts,tsx}"],
+      "rules": {
+        "max-lines": "off",
+        "max-statements": "off",
+        "no-magic-numbers": "off"
+      }
+    },
+    {
+      "files": ["*.config.ts", "scripts/**"],
+      "rules": {
+        "no-default-export": "off",
+        "no-magic-numbers": "off"
+      }
+    }
+  ],
+  "plugins": ["import", "jsdoc", "oxc", "promise", "typescript", "unicorn", "vitest"],
+  "rules": {
+    "consistent-type-specifier-style": "off",
+    "curly": ["error", "multi"],
+    "explicit-function-return-type": "off",
+    "func-style": [
+      "error",
+      "declaration",
+      {
+        "allowArrowFunctions": true
+      }
+    ],
+    "no-async-await": "off",
+    "no-console": "off",
+    "no-continue": "off",
+    "no-default-export": "error",
+    "no-magic-numbers": [
+      "error",
+      {
+        "ignore": [-1, 0, 1],
+        "ignoreClassFieldInitialValues": true,
+        "ignoreDefaultValues": true
+      }
+    ],
+    "no-nested-ternary": "off",
+    "no-optional-chaining": "off",
+    "no-ternary": "off",
+    "one-var": "off",
+    "prefer-await-to-then": "off",
+    "prefer-readonly-parameter-types": "off",
+    "require-unicode-regexp": "off",
+    "sort-imports": "off",
+    "strict-boolean-expressions": "off",
+    "unicorn/filename-case": [
+      "error",
+      {
+        "case": "kebabCase"
+      }
+    ],
+    "unicorn/no-nested-ternary": "off",
+    "use-unknown-in-catch-callback-variable": "off"
+  }
+}

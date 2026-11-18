@@ -6,10 +6,7 @@
     "erasableSyntaxOnly": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
-    "lib": [
-      "ESNext",
-      "DOM"
-    ],
+    "lib": ["ESNext", "DOM"],
     "module": "ESNext",
     "moduleDetection": "force",
     "moduleResolution": "bundler",
@@ -21,11 +18,9 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
+    "types": ["vitest/globals"],
     "verbatimModuleSyntax": true
   },
   "extends": "@tsconfig/strictest/tsconfig.json",
-  "include": [
-    "scripts",
-    "src"
-  ]
+  "include": ["scripts", "src"]
 }

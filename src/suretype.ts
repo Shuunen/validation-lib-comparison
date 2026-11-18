@@ -13,7 +13,6 @@ for (let i = 0; i < nbIterations; i++) {
   })
 
   // @ts-expect-error not used, it's ok :p
-  // eslint-disable-next-line no-unused-vars
   type User = {
     name: string
     age: number

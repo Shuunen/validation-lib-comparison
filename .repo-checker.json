@@ -1,3 +1,5 @@
 {
-  "license": "MIT"
+  "$schema": "./node_modules/repo-check/schema.json",
+  "license": "MIT",
+  "themeColor": "#006f9e"
 }

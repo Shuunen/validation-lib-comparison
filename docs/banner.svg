@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Validation lib comparison">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e1b4b"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" rx="16" fill="url(#bg)"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#e2e8f0">
+    <text x="60" y="130" font-size="56" font-weight="700" font-family="system-ui, sans-serif">Validation lib comparison</text>
+    <text x="60" y="180" font-size="24" fill="#94a3b8" font-family="system-ui, sans-serif">Syntax, size and speed of TypeScript validation libraries</text>
+    <g font-size="20">
+      <rect x="60" y="215" width="90" height="36" rx="18" fill="#3b82f6" opacity=".9"/><text x="105" y="239" text-anchor="middle">zod</text>
+      <rect x="165" y="215" width="120" height="36" rx="18" fill="#a855f7" opacity=".9"/><text x="225" y="239" text-anchor="middle">valibot</text>
+      <rect x="300" y="215" width="120" height="36" rx="18" fill="#14b8a6" opacity=".9"/><text x="360" y="239" text-anchor="middle">arktype</text>
+      <rect x="435" y="215" width="130" height="36" rx="18" fill="#f59e0b" opacity=".9"/><text x="500" y="239" text-anchor="middle" fill="#0f172a">suretype</text>
+    </g>
+    <text x="1140" y="150" font-size="150" text-anchor="end" fill="#22c55e" opacity=".85" font-family="system-ui, sans-serif">✓</text>
+  </g>
+</svg>

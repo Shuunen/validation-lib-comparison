@@ -1,6 +1,9 @@
 # Validation lib comparaison
 
 [![Project license](https://img.shields.io/github/license/Shuunen/validation-lib-comparison.svg?color=informational)](https://github.com/Shuunen/validation-lib-comparison/blob/master/LICENSE)
+[![Visitors](https://hits.sh/github.com/Shuunen/validation-lib-comparison.svg?label=visitors&color=informational)](https://hits.sh/github.com/Shuunen/validation-lib-comparison/)
+
+![logo](docs/banner.svg)
 
 ## The goal of this project
 
@@ -47,7 +50,7 @@ Here are the library used in this comparison :
 Legend :
 
 - Deps : the number of dependencies of the library
-- Size : the minified build size in kilobytes of the related `.ts` file in `src`, run  `bun run build` to see by yourself
+- Size : the minified build size in kilobytes of the related `.ts` file in `src`, run `bun run build` to see by yourself
 - Light : 1 point if the build is `<= 20 KB`
 - Input A : 1 point if the library can see that `age` is `optional, number` in `type UserInput` but `not optional, number` in `type User` the output type
 - Input B : 1 point if the library can see that `phone` is `optional, string or number` in `type UserInput` but `not optional, string` in `type User` the output type
@@ -77,14 +80,6 @@ The 35ms vs 11ms seems like a 3x difference but it's the time to run 1000 iterat
 1. For some weird reason Zod v4 seems to be slower than Zod v3
 2. Zod mini not handling the `or` operator is a blocker to me, hopefully it will be added in the future
 
-## Todo
-
-- [ ] vanilla version ?
-- [ ] check error messages
-- [ ] check custom error messages
-- [ ] check custom validation rules
-- [ ] check the perf without using `console`
-
 ## How to contribute
 
 There are many ways to contribute to this project :
@@ -100,17 +95,18 @@ Just open an issue or a PR, I'll be happy to discuss it with you <3
 ## Thanks
 
 - [Arktype](https://github.com/arktypeio/arktype) : for making this comparison possible
-- [Bun](https://bun.sh) : for their great tool to do almost everything ^^
+- [Boxy Svg](https://boxy-svg.com) : simple & effective svg editor
+- [Bun](https://bun.sh) : super fast runtime for JavaScript and TypeScript
 - [Github](https://github.com) : for all their great work year after year, pushing OSS forward
+- [Knip](https://github.com/webpro/knip) : super tool to find & fix problems
+- [Oxc](https://oxc.rs) : a lovely super-fast collection of JavaScript tools written in Rust
 - [Repo-checker](https://github.com/Shuunen/repo-checker) : eslint cover /src code and this tool the rest ^^
 - [Shields.io](https://shields.io) : for the nice badges on top of this readme
+- [Shuutils](https://github.com/Shuunen/shuutils) : collection of pure JS utils
+- [Svg Omg](https://jakearchibald.github.io/svgomg/) : the great king of svg file size reduction
+- [V8](https://github.com/demurgos/v8-coverage) : simple & effective cli for code coverage
 - [Valibot](https://github.com/fabian-hiller/valibot) : for making this comparison possible
+- [Vitest](https://github.com/vitest-dev/vitest) : super fast vite-native testing framework
 - [Zod](https://github.com/colinhacks/zod) : for making this comparison possible
 
-## Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/Shuunen/validation-lib-comparison.svg?variant=adaptive)](https://starchart.cc/Shuunen/validation-lib-comparison)
-
-## Page views
-
-[![Free Website Counter](https://www.websitecounterfree.com/c.php?d=9&id=65903&s=12)](https://www.websitecounterfree.com)
+![demo](docs/banner.svg)

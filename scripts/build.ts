@@ -1,10 +1,10 @@
-import { Glob, type BuildConfig } from "bun"
+import Bun, { type BuildConfig, Glob } from 'bun'
 import { green, kebabToPascalCase, red, yellow } from 'shuutils'
 
-const glob = new Glob("*.ts")
-const ignore = ['utils.ts']
+const glob = new Glob('*.ts')
+const ignore = new Set(['utils.ts', 'utils.test.ts'])
 const outdir = './dist'
-const nameRegex = /dist[\/\\](?<name>[\w-]+)/
+const nameRegex = /dist[/\\](?<name>[\w-]+)/
 
 function showFileSize(path: string) {
   const name = nameRegex.exec(path)?.groups?.name
@@ -15,20 +15,23 @@ function showFileSize(path: string) {
   console.log(color(kebabToPascalCase(name).padEnd(8)), 'minified build size :', color(`${kb}`), 'KB')
 }
 
-function build(file: string) {
+async function build(file: string) {
   const entrypoints = [`./src/${file}`]
   const options = {
     entrypoints,
     external: ['shuutils'],
+    minify: true,
     outdir,
-    minify: true
   } satisfies BuildConfig
-  Bun.build(options).then((data) => {
+  try {
+    const data = await Bun.build(options)
     if (data.outputs[0]?.path) showFileSize(data.outputs[0].path)
-  }).catch((err) => { console.error('Build failed:', err) })
+  } catch (error) {
+    console.error('Build failed:', error)
+  }
 }
 
-for await (const file of glob.scan("./src")) {
-  if (ignore.includes(file)) continue
-  build(file)
+for await (const file of glob.scan('./src')) {
+  if (ignore.has(file)) continue
+  await build(file)
 }
